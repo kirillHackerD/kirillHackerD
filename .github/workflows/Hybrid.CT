@@ -1,0 +1,2354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="45">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>58</ID>
+      <Description>"SEED HACK"</Description>
+      <Options moHideChildren="1" moActivateChildrenAsWell="1"/>
+      <Color>00FF00</Color>
+      <GroupHeader>1</GroupHeader>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>177</ID>
+          <Description>"Zombie on Your Side (No Dr. Dave)"</Description>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+originalcode:
+//jne PlantsVsZombies.exe+4AF31E
+
+exit:
+jmp returnhere
+
+"PlantsVsZombies.exe"+4AF2AF:
+jmp newmem
+nop
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+"PlantsVsZombies.exe"+4AF2AF:
+db 0F 85 69 00 00 00
+//jne PlantsVsZombies.exe+4AF31E
+</AssemblerScript>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>10</ID>
+              <Description>"No Recharge"</Description>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+originalcode:
+//jle PlantsVsZombies.exe+872AC
+mov [edi+24],00000000
+
+exit:
+jmp returnhere
+
+"PlantsVsZombies.exe"+87296:
+jmp newmem
+nop 4
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+"PlantsVsZombies.exe"+87296:
+db 7E 14 C7 47 24 00 00 00 00
+//jle PlantsVsZombies.exe+872AC
+//mov [edi+24],00000000
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>11</ID>
+              <Description>"Faster Recharge"</Description>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+originalcode:
+add dword ptr [edi+24],11
+mov eax,[edi+24]
+
+exit:
+jmp returnhere
+
+"PlantsVsZombies.exe"+8728C:
+jmp newmem
+nop 2
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+"PlantsVsZombies.exe"+8728C:
+db 83 47 24 01 8B 47 24
+//add dword ptr [edi+24],01
+//mov eax,[edi+24]
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>41</ID>
+              <Description>"Seed 1"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>4 Bytes</VariableType>
+              <Address>PlantsVsZombies.exe+2A9EC0</Address>
+              <Offsets>
+                <Offset>5C</Offset>
+                <Offset>144</Offset>
+                <Offset>768</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>57</ID>
+              <Description>"Seed 2"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>4 Bytes</VariableType>
+              <Address>PlantsVsZombies.exe+2A9EC0</Address>
+              <Offsets>
+                <Offset>AC</Offset>
+                <Offset>144</Offset>
+                <Offset>768</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>43</ID>
+              <Description>"Seed 3"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>4 Bytes</VariableType>
+              <Address>PlantsVsZombies.exe+2A9EC0</Address>
+              <Offsets>
+                <Offset>FC</Offset>
+                <Offset>144</Offset>
+                <Offset>768</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>56</ID>
+              <Description>"Seed 4"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>4 Bytes</VariableType>
+              <Address>PlantsVsZombies.exe+2A9EC0</Address>
+              <Offsets>
+                <Offset>14C</Offset>
+                <Offset>144</Offset>
+                <Offset>768</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>55</ID>
+              <Description>"Seed 5"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>4 Bytes</VariableType>
+              <Address>PlantsVsZombies.exe+2A9EC0</Address>
+              <Offsets>
+                <Offset>19C</Offset>
+                <Offset>144</Offset>
+                <Offset>768</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>54</ID>
+              <Description>"Seed 6"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>4 Bytes</VariableType>
+              <Address>PlantsVsZombies.exe+2A9EC0</Address>
+              <Offsets>
+                <Offset>1EC</Offset>
+                <Offset>144</Offset>
+                <Offset>768</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>53</ID>
+              <Description>"Seed 7"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>4 Bytes</VariableType>
+              <Address>PlantsVsZombies.exe+2A9EC0</Address>
+              <Offsets>
+                <Offset>23C</Offset>
+                <Offset>144</Offset>
+                <Offset>768</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>52</ID>
+              <Description>"Seed 8"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>4 Bytes</VariableType>
+              <Address>PlantsVsZombies.exe+2A9EC0</Address>
+              <Offsets>
+                <Offset>28C</Offset>
+                <Offset>144</Offset>
+                <Offset>768</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>51</ID>
+              <Description>"Seed 9"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>4 Bytes</VariableType>
+              <Address>PlantsVsZombies.exe+2A9EC0</Address>
+              <Offsets>
+                <Offset>2DC</Offset>
+                <Offset>144</Offset>
+                <Offset>768</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>50</ID>
+              <Description>"Seed 10"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>4 Bytes</VariableType>
+              <Address>PlantsVsZombies.exe+2A9EC0</Address>
+              <Offsets>
+                <Offset>32C</Offset>
+                <Offset>144</Offset>
+                <Offset>768</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>49</ID>
+              <Description>"Seed 11"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>4 Bytes</VariableType>
+              <Address>PlantsVsZombies.exe+2A9EC0</Address>
+              <Offsets>
+                <Offset>37C</Offset>
+                <Offset>144</Offset>
+                <Offset>768</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>48</ID>
+              <Description>"Seed 12"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>4 Bytes</VariableType>
+              <Address>PlantsVsZombies.exe+2A9EC0</Address>
+              <Offsets>
+                <Offset>3CC</Offset>
+                <Offset>144</Offset>
+                <Offset>768</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>47</ID>
+              <Description>"Seed 13"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>4 Bytes</VariableType>
+              <Address>PlantsVsZombies.exe+2A9EC0</Address>
+              <Offsets>
+                <Offset>41C</Offset>
+                <Offset>144</Offset>
+                <Offset>768</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>46</ID>
+              <Description>"Seed 14"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>4 Bytes</VariableType>
+              <Address>PlantsVsZombies.exe+2A9EC0</Address>
+              <Offsets>
+                <Offset>46C</Offset>
+                <Offset>144</Offset>
+                <Offset>768</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>171</ID>
+              <Description>"Seed 15"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>4 Bytes</VariableType>
+              <Address>PlantsVsZombies.exe+2A9EC0</Address>
+              <Offsets>
+                <Offset>4BC</Offset>
+                <Offset>144</Offset>
+                <Offset>768</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>170</ID>
+              <Description>"Seed 16"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>4 Bytes</VariableType>
+              <Address>PlantsVsZombies.exe+2A9EC0</Address>
+              <Offsets>
+                <Offset>50C</Offset>
+                <Offset>144</Offset>
+                <Offset>768</Offset>
+              </Offsets>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>59</ID>
+      <Description>"SUN HACK"</Description>
+      <Options moHideChildren="1"/>
+      <Color>00FFFF</Color>
+      <GroupHeader>1</GroupHeader>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>91</ID>
+          <Description>"Sun Value"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>PlantsVsZombies.exe+2A9EC0</Address>
+          <Offsets>
+            <Offset>5560</Offset>
+            <Offset>768</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>176</ID>
+          <Description>"Inf Sun"</Description>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>{ Game   : PlantsVsZombies.exe
+  Version: 
+  Date   : 2024-10-12
+  Author : ayaks
+
+  This script does blah blah blah
+}
+
+[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+
+ 
+ 
+aobscanmodule(Inf_sun,PlantsVsZombies.exe,03 82 60 55 00 00 39) // should be unique
+alloc(newmem,$1000)
+
+label(code)
+label(return)
+
+newmem:
+  mov [edx+00005560],#9990
+
+code:
+  add eax,[edx+00005560]
+  jmp return
+
+Inf_sun:
+  jmp newmem
+  nop
+return:
+registersymbol(Inf_sun)
+
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+Inf_sun:
+  db 03 82 60 55 00 00
+
+unregistersymbol(Inf_sun)
+dealloc(newmem)
+
+{
+// ORIGINAL CODE - INJECTION POINT: PlantsVsZombies.exe+1BAB5
+
+PlantsVsZombies.exe+1BAA7: CC                 - int 3 
+PlantsVsZombies.exe+1BAA8: CC                 - int 3 
+PlantsVsZombies.exe+1BAA9: CC                 - int 3 
+PlantsVsZombies.exe+1BAAA: CC                 - int 3 
+PlantsVsZombies.exe+1BAAB: CC                 - int 3 
+PlantsVsZombies.exe+1BAAC: CC                 - int 3 
+PlantsVsZombies.exe+1BAAD: CC                 - int 3 
+PlantsVsZombies.exe+1BAAE: CC                 - int 3 
+PlantsVsZombies.exe+1BAAF: CC                 - int 3 
+PlantsVsZombies.exe+1BAB0: E8 CB FE FF FF     - call PlantsVsZombies.exe+1B980
+// ---------- INJECTING HERE ----------
+PlantsVsZombies.exe+1BAB5: 03 82 60 55 00 00  - add eax,[edx+00005560]
+// ---------- DONE INJECTING  ----------
+PlantsVsZombies.exe+1BABB: 39 44 24 04        - cmp [esp+04],eax
+PlantsVsZombies.exe+1BABF: 0F 9E C0           - setle al
+PlantsVsZombies.exe+1BAC2: C2 04 00           - ret 0004
+PlantsVsZombies.exe+1BAC5: CC                 - int 3 
+PlantsVsZombies.exe+1BAC6: CC                 - int 3 
+PlantsVsZombies.exe+1BAC7: CC                 - int 3 
+PlantsVsZombies.exe+1BAC8: CC                 - int 3 
+PlantsVsZombies.exe+1BAC9: CC                 - int 3 
+PlantsVsZombies.exe+1BACA: CC                 - int 3 
+PlantsVsZombies.exe+1BACB: CC                 - int 3 
+}
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>1</ID>
+          <Description>"SUN +1000"</Description>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+originalcode:
+add [eax+00005560],#1000
+
+exit:
+jmp returnhere
+
+"PlantsVsZombies.exe"+30A11:
+jmp newmem
+nop
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+"PlantsVsZombies.exe"+30A11:
+db 01 88 60 55 00 00
+//add [eax+00005560],ecx
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>2</ID>
+          <Description>"Sun Don't Decrease"</Description>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+originalcode:
+//sub esi,ebx
+jmp PlantsVsZombies.exe+4AF800
+
+exit:
+jmp returnhere
+
+"PlantsVsZombies.exe"+1BA74:
+jmp newmem
+nop 2
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+"PlantsVsZombies.exe"+1BA74:
+db 2B F3 E9 85 3D 49 00
+//sub esi,ebx
+//jmp PlantsVsZombies.exe+4AF800
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>165</ID>
+          <Description>"Sun increase by Planting"</Description>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+originalcode:
+add esi,ebx
+jmp PlantsVsZombies.exe+4AF800
+
+exit:
+jmp returnhere
+
+"PlantsVsZombies.exe"+1BA74:
+jmp newmem
+nop 2
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+"PlantsVsZombies.exe"+1BA74:
+db 2B F3 E9 85 3D 49 00
+//sub esi,ebx
+//jmp PlantsVsZombies.exe+4AF800
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>7</ID>
+          <Description>"Stop Sun from Sky"</Description>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+originalcode:
+//add dword ptr [esi+00005538],-01
+
+exit:
+jmp returnhere
+
+"PlantsVsZombies.exe"+13B7C:
+jmp newmem
+nop 2
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+"PlantsVsZombies.exe"+13B7C:
+db 83 86 38 55 00 00 FF
+//add dword ptr [esi+00005538],-01
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>8</ID>
+          <Description>"I Dare You.."</Description>
+          <Color>0000FF</Color>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+originalcode:
+//jne PlantsVsZombies.exe+13BF1
+mov eax,00000226
+
+exit:
+jmp returnhere
+
+"PlantsVsZombies.exe"+13B83:
+jmp newmem
+nop 2
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+"PlantsVsZombies.exe"+13B83:
+db 75 6C B8 26 02 00 00
+//jne PlantsVsZombies.exe+13BF1
+//mov eax,00000226
+</AssemblerScript>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>81</ID>
+      <Description>"PLANT HACK"</Description>
+      <Options moHideChildren="1"/>
+      <Color>404080</Color>
+      <GroupHeader>1</GroupHeader>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>83</ID>
+          <Description>"Projectile Change"</Description>
+          <Options moHideChildren="1" moDeactivateChildrenAsWell="1"/>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>{ Game   : PlantsVsZombies.exe
+  Version: 
+  Date   : 2024-07-04
+  Author : ayaks
+
+  This script does blah blah blah
+}
+
+[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+
+ 
+ 
+define(bull_change,PlantsVsZombies.exe+6C769) // should be unique
+assert(bull_change,89 45 5C 8B C6)
+alloc(newmem,$1000)
+label(code)
+label(return)
+label(bull_type)
+
+newmem:
+  bull_type:
+    dd 00
+
+code:
+  push ebx
+  mov ebx,[bull_type]
+  mov eax,ebx
+  pop ebx
+  mov [ebp+5C],eax
+  mov eax,esi
+  jmp return
+
+bull_change:
+  jmp code
+
+return:
+registersymbol(bull_change bull_type)
+
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+bull_change:
+  db 89 45 5C 8B C6
+
+unregistersymbol(bull_change bull_type)
+dealloc(newmem)
+
+{
+// ORIGINAL CODE - INJECTION POINT: PlantsVsZombies.exe+6C769
+
+PlantsVsZombies.exe+6C74C: 85 C0           - test eax,eax
+PlantsVsZombies.exe+6C74E: 7E 0F           - jle PlantsVsZombies.exe+6C75F
+PlantsVsZombies.exe+6C750: 8B 44 24 18     - mov eax,[esp+18]
+PlantsVsZombies.exe+6C754: 8B CB           - mov ecx,ebx
+PlantsVsZombies.exe+6C756: E8 65 FD FA FF  - call PlantsVsZombies.exe+1C4C0
+PlantsVsZombies.exe+6C75B: 8B F8           - mov edi,eax
+PlantsVsZombies.exe+6C75D: EB 02           - jmp PlantsVsZombies.exe+6C761
+PlantsVsZombies.exe+6C75F: 33 FF           - xor edi,edi
+PlantsVsZombies.exe+6C761: DB 44 24 18     - fild dword ptr [esp+18]
+PlantsVsZombies.exe+6C765: 8B 44 24 24     - mov eax,[esp+24]
+// ---------- INJECTING HERE ----------
+PlantsVsZombies.exe+6C769: 89 45 5C        - mov [ebp+5C],eax
+// ---------- DONE INJECTING  ----------
+PlantsVsZombies.exe+6C76C: 8B C6           - mov eax,esi
+PlantsVsZombies.exe+6C76E: D9 5C 24 18     - fstp dword ptr [esp+18]
+PlantsVsZombies.exe+6C772: 8B CF           - mov ecx,edi
+PlantsVsZombies.exe+6C774: D9 44 24 18     - fld dword ptr [esp+18]
+PlantsVsZombies.exe+6C778: D9 5D 30        - fstp dword ptr [ebp+30]
+PlantsVsZombies.exe+6C77B: DB 44 24 1C     - fild dword ptr [esp+1C]
+PlantsVsZombies.exe+6C77F: D9 5C 24 1C     - fstp dword ptr [esp+1C]
+PlantsVsZombies.exe+6C783: D9 44 24 1C     - fld dword ptr [esp+1C]
+PlantsVsZombies.exe+6C787: D9 5D 34        - fstp dword ptr [ebp+34]
+PlantsVsZombies.exe+6C78A: D9 EE           - fldz 
+}
+</AssemblerScript>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>84</ID>
+              <Description>"Value 0 to 35"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>4 Bytes</VariableType>
+              <Address>bull_type</Address>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>180</ID>
+          <Description>"Plant Changer"</Description>
+          <Options moHideChildren="1"/>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>{ Game   : PlantsVsZombies.exe
+  Version: 
+  Date   : 2024-10-13
+  Author : ayaks
+
+  This script does blah blah blah
+}
+
+[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+
+ 
+
+define(PLANTCHANGER,PlantsVsZombies.exe+10865)
+assert(PLANTCHANGER,8B 46 28 8B FD)
+alloc(newmem,$1000)
+label(code)
+label(return)
+label(p_c_type)
+registersymbol(p_c_type)
+
+newmem:
+  p_c_type:
+  dd 0
+
+code:
+  mov eax,[esi+28]
+  push eax
+  mov eax,[p_c_type]
+  mov [esi+28],eax
+  pop eax
+  mov edi,ebp
+  jmp return
+
+PLANTCHANGER:
+  jmp code
+return:
+registersymbol(PLANTCHANGER)
+
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+PLANTCHANGER:
+  db 8B 46 28 8B FD
+
+unregistersymbol(PLANTCHANGER p_c_type)
+dealloc(newmem p_c_type)
+
+{
+// ORIGINAL CODE - INJECTION POINT: PlantsVsZombies.exe+10865
+
+PlantsVsZombies.exe+10842: 80 B8 14 08 00 00 00  - cmp byte ptr [eax+00000814],00
+PlantsVsZombies.exe+10849: 75 33                 - jne PlantsVsZombies.exe+1087E
+PlantsVsZombies.exe+1084B: 8B B5 38 01 00 00     - mov esi,[ebp+00000138]
+PlantsVsZombies.exe+10851: 83 7E 30 01           - cmp dword ptr [esi+30],01
+PlantsVsZombies.exe+10855: 75 27                 - jne PlantsVsZombies.exe+1087E
+PlantsVsZombies.exe+10857: 8B C5                 - mov eax,ebp
+PlantsVsZombies.exe+10859: E8 F2 B5 00 00        - call PlantsVsZombies.exe+1BE50
+PlantsVsZombies.exe+1085E: 84 C0                 - test al,al
+PlantsVsZombies.exe+10860: 75 1C                 - jne PlantsVsZombies.exe+1087E
+PlantsVsZombies.exe+10862: 8B 56 2C              - mov edx,[esi+2C]
+// ---------- INJECTING HERE ----------
+PlantsVsZombies.exe+10865: 8B 46 28              - mov eax,[esi+28]
+// ---------- DONE INJECTING  ----------
+PlantsVsZombies.exe+10868: 8B FD                 - mov edi,ebp
+PlantsVsZombies.exe+1086A: E8 71 D2 00 00        - call PlantsVsZombies.exe+1DAE0
+PlantsVsZombies.exe+1086F: 8B D8                 - mov ebx,eax
+PlantsVsZombies.exe+10871: E8 EA B1 00 00        - call PlantsVsZombies.exe+1BA60
+PlantsVsZombies.exe+10876: 84 C0                 - test al,al
+PlantsVsZombies.exe+10878: 0F 84 D4 06 00 00     - je PlantsVsZombies.exe+10F52
+PlantsVsZombies.exe+1087E: 8B 8D 8C 00 00 00     - mov ecx,[ebp+0000008C]
+PlantsVsZombies.exe+10884: E8 B7 2F 04 00        - call PlantsVsZombies.exe+53840
+PlantsVsZombies.exe+10889: 84 C0                 - test al,al
+PlantsVsZombies.exe+1088B: 74 17                 - je PlantsVsZombies.exe+108A4
+}
+</AssemblerScript>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>181</ID>
+              <Description>"Plant ID"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>4 Bytes</VariableType>
+              <Address>p_c_type</Address>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>88</ID>
+          <Description>"Multi Plants"</Description>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+originalcode:
+//jne PlantsVsZombies.exe+10BD1
+
+exit:
+jmp returnhere
+
+"PlantsVsZombies.exe"+10AE6:
+jmp newmem
+nop
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+"PlantsVsZombies.exe"+10AE6:
+db 0F 85 E5 00 00 00
+//jne PlantsVsZombies.exe+10BD1
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>85</ID>
+          <Description>"Plant on Anywhere"</Description>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+originalcode:
+jmp PlantsVsZombies.exe+10754
+
+exit:
+jmp returnhere
+
+"PlantsVsZombies.exe"+FE2F:
+jmp newmem
+nop
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+"PlantsVsZombies.exe"+FE2F:
+db 0F 84 1F 09 00 00
+//je PlantsVsZombies.exe+10754
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>28</ID>
+          <Description>"Rapid Fire"</Description>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+originalcode:
+//jne PlantsVsZombies.exe+64934
+
+exit:
+jmp returnhere
+
+"PlantsVsZombies.exe"+64A69:
+jmp newmem
+nop
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+"PlantsVsZombies.exe"+64A69:
+db 0F 85 C5 FE FF FF
+//jne PlantsVsZombies.exe+64934
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>22</ID>
+          <Description>"Fast Shoot"</Description>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+originalcode:
+mov [esi+58],25
+jne PlantsVsZombies.exe+5F8D8
+
+exit:
+jmp returnhere
+
+"PlantsVsZombies.exe"+5F8CA:
+jmp newmem
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+"PlantsVsZombies.exe"+5F8CA:
+db 89 4E 58 75 09
+//mov [esi+58],ecx
+//jne PlantsVsZombies.exe+5F8D8
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>36</ID>
+          <Description>"Fast Charge Potato Mine"</Description>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+originalcode:
+add eax,-01
+mov [edi+54],00
+
+exit:
+jmp returnhere
+
+"PlantsVsZombies.exe"+6324C:
+jmp newmem
+nop
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+"PlantsVsZombies.exe"+6324C:
+db 83 C0 FF 89 47 54
+//add eax,-01
+//mov [edi+54],eax
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>156</ID>
+          <Description>"Explode Instantly"</Description>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+originalcode:
+je PlantsVsZombies.exe+63410
+push edi
+call PlantsVsZombies.exe+666A0
+
+exit:
+jmp returnhere
+
+"PlantsVsZombies.exe"+63408:
+jmp newmem
+nop 3
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+"PlantsVsZombies.exe"+63408:
+db 75 06 57 E8 90 32 00 00
+//jne PlantsVsZombies.exe+63410
+//push edi
+//call PlantsVsZombies.exe+666A0
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>23</ID>
+          <Description>"Umm..."</Description>
+          <Color>0000FF</Color>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+originalcode:
+//jne PlantsVsZombies.exe+648C0
+cmp eax,0F
+
+exit:
+jmp returnhere
+
+"PlantsVsZombies.exe"+64895:
+jmp newmem
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+"PlantsVsZombies.exe"+64895:
+db 75 29 83 F8 0F
+//jne PlantsVsZombies.exe+648C0
+//cmp eax,0F
+</AssemblerScript>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>80</ID>
+      <Description>"ZOMBIE HACK"</Description>
+      <Options moHideChildren="1"/>
+      <Color>008000</Color>
+      <GroupHeader>1</GroupHeader>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>160</ID>
+          <Description>"Change Zombie Row"</Description>
+          <Options moHideChildren="1"/>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>{ Game   : PlantsVsZombies.exe
+  Version: 
+  Date   : 2024-07-15
+  Author : ayaks
+
+  This script does blah blah blah
+}
+
+[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+
+ 
+ 
+define(row_zombie,PlantsVsZombies.exe+16A3D) // should be unique
+assert(row_zombie,8B 51 1C 69 D2 10 27 00 00 81 C2 43)
+alloc(newmem,$1000)
+label(code)
+label(return row_values)
+
+newmem:
+  row_values:
+    dd 02
+
+code:
+  mov edx,[ecx+1C]
+  push eax
+  mov eax,[row_values]
+  mov [ecx+1C],eax
+  pop eax
+  imul edx,edx,00002710
+  jmp return
+
+row_zombie:
+  jmp newmem
+  nop 4
+return:
+registersymbol(row_zombie row_values)
+
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+row_zombie:
+  db 8B 51 1C 69 D2 10 27 00 00
+
+unregistersymbol(row_zombie row_values)
+dealloc(newmem)
+
+{
+// ORIGINAL CODE - INJECTION POINT: PlantsVsZombies.exe+16A3D
+
+PlantsVsZombies.exe+16A1A: 83 C7 01           - add edi,01
+PlantsVsZombies.exe+16A1D: 89 50 04           - mov [eax+04],edx
+PlantsVsZombies.exe+16A20: 89 48 08           - mov [eax+08],ecx
+PlantsVsZombies.exe+16A23: 89 7C 24 14        - mov [esp+14],edi
+PlantsVsZombies.exe+16A27: E8 44 D5 11 00     - call PlantsVsZombies.exe+133F70
+PlantsVsZombies.exe+16A2C: 84 C0              - test al,al
+PlantsVsZombies.exe+16A2E: 74 29              - je PlantsVsZombies.exe+16A59
+PlantsVsZombies.exe+16A30: 8D 04 7F           - lea eax,[edi+edi*2]
+PlantsVsZombies.exe+16A33: 8D 44 84 18        - lea eax,[esp+eax*4+18]
+PlantsVsZombies.exe+16A37: C7 00 03 00 00 00  - mov [eax],00000003
+// ---------- INJECTING HERE ----------
+PlantsVsZombies.exe+16A3D: 8B 51 1C           - mov edx,[ecx+1C]
+// ---------- DONE INJECTING  ----------
+PlantsVsZombies.exe+16A40: 69 D2 10 27 00 00  - imul edx,edx,00002710
+PlantsVsZombies.exe+16A46: 81 C2 43 0D 03 00  - add edx,00030D43
+PlantsVsZombies.exe+16A4C: 83 C7 01           - add edi,01
+PlantsVsZombies.exe+16A4F: 89 50 04           - mov [eax+04],edx
+PlantsVsZombies.exe+16A52: 89 48 08           - mov [eax+08],ecx
+PlantsVsZombies.exe+16A55: 89 7C 24 14        - mov [esp+14],edi
+PlantsVsZombies.exe+16A59: 83 79 24 14        - cmp dword ptr [ecx+24],14
+PlantsVsZombies.exe+16A5D: 75 29              - jne PlantsVsZombies.exe+16A88
+PlantsVsZombies.exe+16A5F: 8D 04 7F           - lea eax,[edi+edi*2]
+PlantsVsZombies.exe+16A62: 8D 44 84 18        - lea eax,[esp+eax*4+18]
+}
+</AssemblerScript>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>161</ID>
+              <Description>"0-5"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>4 Bytes</VariableType>
+              <Address>row_values</Address>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>13</ID>
+          <Description>"Zombie Out Counter"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>PlantsVsZombies.exe+2A9EC0</Address>
+          <Offsets>
+            <Offset>559c</Offset>
+            <Offset>768</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>4</ID>
+          <Description>"Stop Zombies Spawn"</Description>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+originalcode:
+//add dword ptr [edi+0000559C],-01
+
+exit:
+jmp returnhere
+
+"PlantsVsZombies.exe"+13E45:
+jmp newmem
+nop 2
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+"PlantsVsZombies.exe"+13E45:
+db 83 87 9C 55 00 00 FF
+//add dword ptr [edi+0000559C],-01
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>14</ID>
+          <Description>"All Zombie Out"</Description>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>{ Game   : PlantsVsZombies.exe
+  Version: 
+  Date   : 2024-07-02
+  Author : ayaks
+
+  This script does blah blah blah
+}
+
+[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+
+ 
+ 
+aobscanmodule(AZO,PlantsVsZombies.exe,8B 8F 9C 55 00 00 0F) // should be unique
+alloc(newmem,$1000)
+
+label(code)
+label(return)
+
+newmem:
+
+code:
+  mov [edi+0000559C],0
+  mov ecx,[edi+0000559C]
+  jmp return
+
+AZO:
+  jmp newmem
+  nop
+return:
+registersymbol(AZO)
+
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+AZO:
+  db 8B 8F 9C 55 00 00
+
+unregistersymbol(AZO)
+dealloc(newmem)
+
+{
+// ORIGINAL CODE - INJECTION POINT: PlantsVsZombies.exe+13E4E
+
+PlantsVsZombies.exe+13E27: 0F 84 BF 02 00 00     - je PlantsVsZombies.exe+140EC
+PlantsVsZombies.exe+13E2D: 8B C1                 - mov eax,ecx
+PlantsVsZombies.exe+13E2F: E8 9C F8 03 00        - call PlantsVsZombies.exe+536D0
+PlantsVsZombies.exe+13E34: 84 C0                 - test al,al
+PlantsVsZombies.exe+13E36: 75 0D                 - jne PlantsVsZombies.exe+13E45
+PlantsVsZombies.exe+13E38: E8 03 F9 03 00        - call PlantsVsZombies.exe+53740
+PlantsVsZombies.exe+13E3D: 84 C0                 - test al,al
+PlantsVsZombies.exe+13E3F: 0F 84 A7 02 00 00     - je PlantsVsZombies.exe+140EC
+PlantsVsZombies.exe+13E45: 83 87 9C 55 00 00 FF  - add dword ptr [edi+0000559C],-01
+PlantsVsZombies.exe+13E4C: 3B F3                 - cmp esi,ebx
+// ---------- INJECTING HERE ----------
+PlantsVsZombies.exe+13E4E: 8B 8F 9C 55 00 00     - mov ecx,[edi+0000559C]
+// ---------- DONE INJECTING  ----------
+PlantsVsZombies.exe+13E54: 0F 85 C9 00 00 00     - jne PlantsVsZombies.exe+13F23
+PlantsVsZombies.exe+13E5A: 8B 87 8C 00 00 00     - mov eax,[edi+0000008C]
+PlantsVsZombies.exe+13E60: E8 6B F8 03 00        - call PlantsVsZombies.exe+536D0
+PlantsVsZombies.exe+13E65: 84 C0                 - test al,al
+PlantsVsZombies.exe+13E67: 0F 84 B6 00 00 00     - je PlantsVsZombies.exe+13F23
+PlantsVsZombies.exe+13E6D: 85 C9                 - test ecx,ecx
+PlantsVsZombies.exe+13E6F: 0F 85 77 02 00 00     - jne PlantsVsZombies.exe+140EC
+PlantsVsZombies.exe+13E75: 8B CF                 - mov ecx,edi
+PlantsVsZombies.exe+13E77: E8 64 85 FF FF        - call PlantsVsZombies.exe+C3E0
+PlantsVsZombies.exe+13E7C: 8B 4C 24 28           - mov ecx,[esp+28]
+}
+</AssemblerScript>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>66</ID>
+      <Description>"SHOP HACK"</Description>
+      <Options moHideChildren="1"/>
+      <Color>FFFF00</Color>
+      <GroupHeader>1</GroupHeader>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>78</ID>
+          <Description>"CURRENCY"</Description>
+          <Options moHideChildren="1"/>
+          <Color>800080</Color>
+          <GroupHeader>1</GroupHeader>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>74</ID>
+              <Description>"Silver Coin"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <Color>C0C0C0</Color>
+              <VariableType>4 Bytes</VariableType>
+              <Address>PlantsVsZombies.exe+2A9EC0</Address>
+              <Offsets>
+                <Offset>208</Offset>
+                <Offset>82C</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>77</ID>
+              <Description>"Gold Coin"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <Color>00FFFF</Color>
+              <VariableType>4 Bytes</VariableType>
+              <Address>PlantsVsZombies.exe+2A9EC0</Address>
+              <Offsets>
+                <Offset>20C</Offset>
+                <Offset>82C</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>76</ID>
+              <Description>"Diamond"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <Color>FFFF00</Color>
+              <VariableType>4 Bytes</VariableType>
+              <Address>PlantsVsZombies.exe+2A9EC0</Address>
+              <Offsets>
+                <Offset>210</Offset>
+                <Offset>82C</Offset>
+              </Offsets>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>123</ID>
+          <Description>"ITEM"</Description>
+          <Options moHideChildren="1"/>
+          <Color>808000</Color>
+          <GroupHeader>1</GroupHeader>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>124</ID>
+              <Description>"Silver Shop"</Description>
+              <Options moHideChildren="1"/>
+              <Color>C0C0C0</Color>
+              <GroupHeader>1</GroupHeader>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>115</ID>
+                  <Description>"Rake"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>PlantsVsZombies.exe+2A9EC0</Address>
+                  <Offsets>
+                    <Offset>220</Offset>
+                    <Offset>82C</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>120</ID>
+                  <Description>"Bucket of Butter"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>PlantsVsZombies.exe+2A9EC0</Address>
+                  <Offsets>
+                    <Offset>1CB4</Offset>
+                    <Offset>82C</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>119</ID>
+                  <Description>"Smoll Cherry"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>PlantsVsZombies.exe+2A9EC0</Address>
+                  <Offsets>
+                    <Offset>1CB8</Offset>
+                    <Offset>82C</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>118</ID>
+                  <Description>"Thorn Blover"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>PlantsVsZombies.exe+2A9EC0</Address>
+                  <Offsets>
+                    <Offset>1CBC</Offset>
+                    <Offset>82C</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>117</ID>
+                  <Description>"Sunbomb"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>PlantsVsZombies.exe+2A9EC0</Address>
+                  <Offsets>
+                    <Offset>1CC0</Offset>
+                    <Offset>82C</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>122</ID>
+                  <Description>"Administrator PC"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>PlantsVsZombies.exe+2A9EC0</Address>
+                  <Offsets>
+                    <Offset>1CC4</Offset>
+                    <Offset>82C</Offset>
+                  </Offsets>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>131</ID>
+              <Description>"Gold Shop"</Description>
+              <Options moHideChildren="1"/>
+              <Color>00FFFF</Color>
+              <GroupHeader>1</GroupHeader>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>126</ID>
+                  <Description>"Sun +100"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>PlantsVsZombies.exe+2A9EC0</Address>
+                  <Offsets>
+                    <Offset>1CEC</Offset>
+                    <Offset>82C</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>130</ID>
+                  <Description>"Sun +500"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>PlantsVsZombies.exe+2A9EC0</Address>
+                  <Offsets>
+                    <Offset>1CF0</Offset>
+                    <Offset>82C</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>129</ID>
+                  <Description>"Sun +1000"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>PlantsVsZombies.exe+2A9EC0</Address>
+                  <Offsets>
+                    <Offset>1CF4</Offset>
+                    <Offset>82C</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>128</ID>
+                  <Description>"Sun +2000"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>PlantsVsZombies.exe+2A9EC0</Address>
+                  <Offsets>
+                    <Offset>1CF8</Offset>
+                    <Offset>82C</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>127</ID>
+                  <Description>"Grave Buster Gold x10"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>PlantsVsZombies.exe+2A9EC0</Address>
+                  <Offsets>
+                    <Offset>1CFC</Offset>
+                    <Offset>82C</Offset>
+                  </Offsets>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>138</ID>
+              <Description>"Diamond Shop"</Description>
+              <Options moHideChildren="1"/>
+              <Color>FFFF00</Color>
+              <GroupHeader>1</GroupHeader>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>133</ID>
+                  <Description>"Icy Tallnut x2"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>PlantsVsZombies.exe+2A9EC0</Address>
+                  <Offsets>
+                    <Offset>1D00</Offset>
+                    <Offset>82C</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>137</ID>
+                  <Description>"Leprechaun Marigold x2"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>PlantsVsZombies.exe+2A9EC0</Address>
+                  <Offsets>
+                    <Offset>1D04</Offset>
+                    <Offset>82C</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>136</ID>
+                  <Description>"Burger Shooter x2"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>PlantsVsZombies.exe+2A9EC0</Address>
+                  <Offsets>
+                    <Offset>1D08</Offset>
+                    <Offset>82C</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>135</ID>
+                  <Description>"Cupid Hypno-Shroom x2"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>PlantsVsZombies.exe+2A9EC0</Address>
+                  <Offsets>
+                    <Offset>1D0C</Offset>
+                    <Offset>82C</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>134</ID>
+                  <Description>"Holographic x5"</Description>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>PlantsVsZombies.exe+2A9EC0</Address>
+                  <Offsets>
+                    <Offset>1D10</Offset>
+                    <Offset>82C</Offset>
+                  </Offsets>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>167</ID>
+      <Description>"FREE SHOP unstable (Exit Game After Use)"</Description>
+      <Options moHideChildren="1" moActivateChildrenAsWell="1"/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+originalcode:
+//mov ecx,[ecx+edx*4+00000208]
+
+exit:
+jmp returnhere
+
+"PlantsVsZombies.exe"+4C202E:
+jmp newmem
+nop 2
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+"PlantsVsZombies.exe"+4C202E:
+db 8B 8C 91 08 02 00 00
+//mov ecx,[ecx+edx*4+00000208]
+</AssemblerScript>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>166</ID>
+          <Description>"Silver Coin Shop"</Description>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem11,2048)
+label(returnhere11)
+label(originalcode11)
+label(exit11)
+
+newmem11: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+originalcode11:
+add [eax+00000208],00004E20
+
+exit11:
+jmp returnhere11
+
+"PlantsVsZombies.exe"+4C1381:
+jmp newmem11
+nop 5
+returnhere11:
+
+alloc(newmem10,2048)
+label(returnhere10)
+label(originalcode10)
+label(exit10)
+
+newmem10: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+originalcode10:
+add [eax+00000208],00001388
+
+exit10:
+jmp returnhere10
+
+"PlantsVsZombies.exe"+4C1312:
+jmp newmem10
+nop 5
+returnhere10:
+
+alloc(newmem9,2048)
+label(returnhere9)
+label(originalcode9)
+label(exit9)
+
+newmem9: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+originalcode9:
+add [eax+00000208],00000320
+
+exit9:
+jmp returnhere9
+
+"PlantsVsZombies.exe"+4C1237:
+jmp newmem9
+nop 5
+returnhere9:
+
+alloc(newmem8,2048)
+label(returnhere8)
+label(originalcode8)
+label(exit8)
+
+newmem8: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+originalcode8:
+add [eax+00000208],00000BB8
+
+exit8:
+jmp returnhere8
+
+"PlantsVsZombies.exe"+4C11C5:
+jmp newmem8
+nop 5
+returnhere8:
+
+alloc(newmem7,2048)
+label(returnhere7)
+label(originalcode7)
+label(exit7)
+
+newmem7: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+originalcode7:
+add [eax+00000208],00001388
+
+exit7:
+jmp returnhere7
+
+"PlantsVsZombies.exe"+4C1153:
+jmp newmem7
+nop 5
+returnhere7:
+
+alloc(newmem6,2048)
+label(returnhere6)
+label(originalcode6)
+label(exit6)
+
+newmem6: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+originalcode6:
+add [eax+00000208],00001388
+
+exit6:
+jmp returnhere6
+
+"PlantsVsZombies.exe"+4C10E1:
+jmp newmem6
+nop 5
+returnhere6:
+
+alloc(newmem5,2048)
+label(returnhere5)
+label(originalcode5)
+label(exit5)
+
+newmem5: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+originalcode5:
+add [eax+00000208],000007D0
+
+exit5:
+jmp returnhere5
+
+"PlantsVsZombies.exe"+4C1072:
+jmp newmem5
+nop 5
+returnhere5:
+
+alloc(newmem4,2048)
+label(returnhere4)
+label(originalcode4)
+label(exit4)
+
+newmem4: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+originalcode4:
+add [eax+00000208],000003E8
+
+exit4:
+jmp returnhere4
+
+"PlantsVsZombies.exe"+4C1003:
+jmp newmem4
+nop 5
+returnhere4:
+
+alloc(newmem3,2048)
+label(returnhere3)
+label(originalcode3)
+label(exit3)
+
+newmem3: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+originalcode3:
+add [eax+00000208],000001F4
+
+exit3:
+jmp returnhere3
+
+"PlantsVsZombies.exe"+4C0F94:
+jmp newmem3
+nop 5
+returnhere3:
+
+alloc(newmem2,2048)
+label(returnhere2)
+label(originalcode2)
+label(exit2)
+
+newmem2: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+originalcode2:
+add [eax+00000208],0000012C
+
+exit2:
+jmp returnhere2
+
+"PlantsVsZombies.exe"+4C0F25:
+jmp newmem2
+nop 5
+returnhere2:
+
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+originalcode:
+add dword ptr [eax+00000208],64
+
+exit:
+jmp returnhere
+
+"PlantsVsZombies.exe"+4C0EB9:
+jmp newmem
+nop 2
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem11)
+"PlantsVsZombies.exe"+4C1381:
+db 81 A8 08 02 00 00 20 4E 00 00
+//sub [eax+00000208],00004E20
+dealloc(newmem10)
+"PlantsVsZombies.exe"+4C1312:
+db 81 A8 08 02 00 00 88 13 00 00
+//sub [eax+00000208],00001388
+dealloc(newmem9)
+"PlantsVsZombies.exe"+4C1237:
+db 81 A8 08 02 00 00 20 03 00 00
+//sub [eax+00000208],00000320
+dealloc(newmem8)
+"PlantsVsZombies.exe"+4C11C5:
+db 81 A8 08 02 00 00 B8 0B 00 00
+//sub [eax+00000208],00000BB8
+dealloc(newmem7)
+"PlantsVsZombies.exe"+4C1153:
+db 81 A8 08 02 00 00 88 13 00 00
+//sub [eax+00000208],00001388
+dealloc(newmem6)
+"PlantsVsZombies.exe"+4C10E1:
+db 81 A8 08 02 00 00 88 13 00 00
+//sub [eax+00000208],00001388
+dealloc(newmem5)
+"PlantsVsZombies.exe"+4C1072:
+db 81 A8 08 02 00 00 D0 07 00 00
+//sub [eax+00000208],000007D0
+dealloc(newmem4)
+"PlantsVsZombies.exe"+4C1003:
+db 81 A8 08 02 00 00 E8 03 00 00
+//sub [eax+00000208],000003E8
+dealloc(newmem3)
+"PlantsVsZombies.exe"+4C0F94:
+db 81 A8 08 02 00 00 F4 01 00 00
+//sub [eax+00000208],000001F4
+dealloc(newmem2)
+"PlantsVsZombies.exe"+4C0F25:
+db 81 A8 08 02 00 00 2C 01 00 00
+//sub [eax+00000208],0000012C
+dealloc(newmem)
+"PlantsVsZombies.exe"+4C0EB9:
+db 83 A8 08 02 00 00 64
+//sub dword ptr [eax+00000208],64
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>168</ID>
+          <Description>"Gold Coin Shop"</Description>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem9,2048)
+label(returnhere9)
+label(originalcode9)
+label(exit9)
+
+newmem9: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+originalcode9:
+add [eax+0000020C],00001388
+
+exit9:
+jmp returnhere9
+
+"PlantsVsZombies.exe"+4C0A54:
+jmp newmem9
+nop 5
+returnhere9:
+
+alloc(newmem8,2048)
+label(returnhere8)
+label(originalcode8)
+label(exit8)
+
+newmem8: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+originalcode8:
+add [eax+0000020C],00000BB8
+
+exit8:
+jmp returnhere8
+
+"PlantsVsZombies.exe"+4C09E2:
+jmp newmem8
+nop 5
+returnhere8:
+
+alloc(newmem7,2048)
+label(returnhere7)
+label(originalcode7)
+label(exit7)
+
+newmem7: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+originalcode7:
+add [eax+0000020C],00001F40
+
+exit7:
+jmp returnhere7
+
+"PlantsVsZombies.exe"+4C0970:
+jmp newmem7
+nop 5
+returnhere7:
+
+alloc(newmem6,2048)
+label(returnhere6)
+label(originalcode6)
+label(exit6)
+
+newmem6: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+originalcode6:
+add [eax+0000020C],00001388
+
+exit6:
+jmp returnhere6
+
+"PlantsVsZombies.exe"+4C08FE:
+jmp newmem6
+nop 5
+returnhere6:
+
+alloc(newmem5,2048)
+label(returnhere5)
+label(originalcode5)
+label(exit5)
+
+newmem5: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+originalcode5:
+add [eax+0000020C],000007D0
+
+exit5:
+jmp returnhere5
+
+"PlantsVsZombies.exe"+4C088F:
+jmp newmem5
+nop 5
+returnhere5:
+
+alloc(newmem4,2048)
+label(returnhere4)
+label(originalcode4)
+label(exit4)
+
+newmem4: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+originalcode4:
+add [eax+0000020C],000004B0
+
+exit4:
+jmp returnhere4
+
+"PlantsVsZombies.exe"+4C0820:
+jmp newmem4
+nop 5
+returnhere4:
+
+alloc(newmem3,2048)
+label(returnhere3)
+label(originalcode3)
+label(exit3)
+
+newmem3: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+originalcode3:
+add [eax+0000020C],00000320
+
+exit3:
+jmp returnhere3
+
+"PlantsVsZombies.exe"+4C07B1:
+jmp newmem3
+nop 5
+returnhere3:
+
+alloc(newmem2,2048)
+label(returnhere2)
+label(originalcode2)
+label(exit2)
+
+newmem2: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+originalcode2:
+add [eax+0000020C],000001F4
+
+exit2:
+jmp returnhere2
+
+"PlantsVsZombies.exe"+4C0742:
+jmp newmem2
+nop 5
+returnhere2:
+
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+originalcode:
+add [eax+0000020C],000000C8
+
+exit:
+jmp returnhere
+
+"PlantsVsZombies.exe"+4C06D3:
+jmp newmem
+nop 5
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem9)
+"PlantsVsZombies.exe"+4C0A54:
+db 81 A8 0C 02 00 00 88 13 00 00
+//sub [eax+0000020C],00001388
+dealloc(newmem8)
+"PlantsVsZombies.exe"+4C09E2:
+db 81 A8 0C 02 00 00 B8 0B 00 00
+//sub [eax+0000020C],00000BB8
+dealloc(newmem7)
+"PlantsVsZombies.exe"+4C0970:
+db 81 A8 0C 02 00 00 40 1F 00 00
+//sub [eax+0000020C],00001F40
+dealloc(newmem6)
+"PlantsVsZombies.exe"+4C08FE:
+db 81 A8 0C 02 00 00 88 13 00 00
+//sub [eax+0000020C],00001388
+dealloc(newmem5)
+"PlantsVsZombies.exe"+4C088F:
+db 81 A8 0C 02 00 00 D0 07 00 00
+//sub [eax+0000020C],000007D0
+dealloc(newmem4)
+"PlantsVsZombies.exe"+4C0820:
+db 81 A8 0C 02 00 00 B0 04 00 00
+//sub [eax+0000020C],000004B0
+dealloc(newmem3)
+"PlantsVsZombies.exe"+4C07B1:
+db 81 A8 0C 02 00 00 20 03 00 00
+//sub [eax+0000020C],00000320
+dealloc(newmem2)
+"PlantsVsZombies.exe"+4C0742:
+db 81 A8 0C 02 00 00 F4 01 00 00
+//sub [eax+0000020C],000001F4
+dealloc(newmem)
+"PlantsVsZombies.exe"+4C06D3:
+db 81 A8 0C 02 00 00 C8 00 00 00
+//sub [eax+0000020C],000000C8
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>169</ID>
+          <Description>"Diamond Shop"</Description>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem10,2048)
+label(returnhere10)
+label(originalcode10)
+label(exit10)
+
+newmem10: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+originalcode10:
+add [eax+00000210],000007D0
+
+exit10:
+jmp returnhere10
+
+"PlantsVsZombies.exe"+4C05F4:
+jmp newmem10
+nop 5
+returnhere10:
+
+alloc(newmem9,2048)
+label(returnhere9)
+label(originalcode9)
+label(exit9)
+
+newmem9: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+originalcode9:
+add [eax+00000210],000003E8
+
+exit9:
+jmp returnhere9
+
+"PlantsVsZombies.exe"+4C0582:
+jmp newmem9
+nop 5
+returnhere9:
+
+alloc(newmem8,2048)
+label(returnhere8)
+label(originalcode8)
+label(exit8)
+
+newmem8: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+originalcode8:
+add [eax+00000210],000003E8
+
+exit8:
+jmp returnhere8
+
+"PlantsVsZombies.exe"+4C0510:
+jmp newmem8
+nop 5
+returnhere8:
+
+alloc(newmem7,2048)
+label(returnhere7)
+label(originalcode7)
+label(exit7)
+
+newmem7: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+originalcode7:
+add [eax+00000210],00000BB8
+
+exit7:
+jmp returnhere7
+
+"PlantsVsZombies.exe"+4C049E:
+jmp newmem7
+nop 5
+returnhere7:
+
+alloc(newmem6,2048)
+label(returnhere6)
+label(originalcode6)
+label(exit6)
+
+newmem6: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+originalcode6:
+add [eax+00000210],00001388
+
+exit6:
+jmp returnhere6
+
+"PlantsVsZombies.exe"+4C042C:
+jmp newmem6
+nop 5
+returnhere6:
+
+alloc(newmem5,2048)
+label(returnhere5)
+label(originalcode5)
+label(exit5)
+
+newmem5: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+originalcode5:
+add [eax+00000210],000001F4
+
+exit5:
+jmp returnhere5
+
+"PlantsVsZombies.exe"+4C03BD:
+jmp newmem5
+nop 5
+returnhere5:
+
+alloc(newmem4,2048)
+label(returnhere4)
+label(originalcode4)
+label(exit4)
+
+newmem4: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+originalcode4:
+add [eax+00000210],000000C8
+
+exit4:
+jmp returnhere4
+
+"PlantsVsZombies.exe"+4C034E:
+jmp newmem4
+nop 5
+returnhere4:
+
+alloc(newmem3,2048)
+label(returnhere3)
+label(originalcode3)
+label(exit3)
+
+newmem3: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+originalcode3:
+add dword ptr [eax+00000210],64
+
+exit3:
+jmp returnhere3
+
+"PlantsVsZombies.exe"+4C02E2:
+jmp newmem3
+nop 2
+returnhere3:
+
+alloc(newmem2,2048)
+label(returnhere2)
+label(originalcode2)
+label(exit2)
+
+newmem2: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+originalcode2:
+add dword ptr [eax+00000210],64
+
+exit2:
+jmp returnhere2
+
+"PlantsVsZombies.exe"+4C0279:
+jmp newmem2
+nop 2
+returnhere2:
+
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+originalcode:
+add dword ptr [eax+00000210],64
+
+exit:
+jmp returnhere
+
+"PlantsVsZombies.exe"+4C0210:
+jmp newmem
+nop 2
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem10)
+"PlantsVsZombies.exe"+4C05F4:
+db 81 A8 10 02 00 00 D0 07 00 00
+//sub [eax+00000210],000007D0
+dealloc(newmem9)
+"PlantsVsZombies.exe"+4C0582:
+db 81 A8 10 02 00 00 E8 03 00 00
+//sub [eax+00000210],000003E8
+dealloc(newmem8)
+"PlantsVsZombies.exe"+4C0510:
+db 81 A8 10 02 00 00 E8 03 00 00
+//sub [eax+00000210],000003E8
+dealloc(newmem7)
+"PlantsVsZombies.exe"+4C049E:
+db 81 A8 10 02 00 00 B8 0B 00 00
+//sub [eax+00000210],00000BB8
+dealloc(newmem6)
+"PlantsVsZombies.exe"+4C042C:
+db 81 A8 10 02 00 00 88 13 00 00
+//sub [eax+00000210],00001388
+dealloc(newmem5)
+"PlantsVsZombies.exe"+4C03BD:
+db 81 A8 10 02 00 00 F4 01 00 00
+//sub [eax+00000210],000001F4
+dealloc(newmem4)
+"PlantsVsZombies.exe"+4C034E:
+db 81 A8 10 02 00 00 C8 00 00 00
+//sub [eax+00000210],000000C8
+dealloc(newmem3)
+"PlantsVsZombies.exe"+4C02E2:
+db 83 A8 10 02 00 00 64
+//sub dword ptr [eax+00000210],64
+dealloc(newmem2)
+"PlantsVsZombies.exe"+4C0279:
+db 83 A8 10 02 00 00 64
+//sub dword ptr [eax+00000210],64
+dealloc(newmem)
+"PlantsVsZombies.exe"+4C0210:
+db 83 A8 10 02 00 00 64
+//sub dword ptr [eax+00000210],64
+</AssemblerScript>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>174</ID>
+      <Description>"Lv ID"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>PlantsVsZombies.exe+2A9EC0</Address>
+      <Offsets>
+        <Offset>7f8</Offset>
+      </Offsets>
+    </CheatEntry>
+  </CheatEntries>
+  <CheatCodes>
+    <CodeEntry>
+      <Description>Change of mov ecx,[ecx+edx*4+00000208]</Description>
+      <AddressString>PlantsVsZombies.exe+4C202E</AddressString>
+      <Before>
+        <Byte>89</Byte>
+        <Byte>2C</Byte>
+        <Byte>08</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </Before>
+      <Actual>
+        <Byte>8B</Byte>
+        <Byte>8C</Byte>
+        <Byte>91</Byte>
+        <Byte>08</Byte>
+        <Byte>02</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </Actual>
+      <After>
+        <Byte>39</Byte>
+        <Byte>D9</Byte>
+        <Byte>0F</Byte>
+        <Byte>8C</Byte>
+        <Byte>08</Byte>
+      </After>
+    </CodeEntry>
+  </CheatCodes>
+  <UserdefinedSymbols/>
+  <DisassemblerComments>
+    <DisassemblerComment>
+      <Address>"PlantsVsZombies.exe"+10AE6</Address>
+      <Comment>//Multi Plants
+</Comment>
+    </DisassemblerComment>
+    <DisassemblerComment>
+      <Address>"PlantsVsZombies.exe"+4AF2AF</Address>
+      <Comment>//Zombie any mode
+</Comment>
+    </DisassemblerComment>
+  </DisassemblerComments>
+</CheatTable>
